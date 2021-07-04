@@ -44,7 +44,7 @@ class About extends StatelessWidget {
                 color: kFontColor,
                 fontWeight: FontWeight.w700,
                 fontSize:
-                    ResponsiveLayoutBuilder.isSmallScreen(context) ? 18
+                    ResponsiveLayoutBuilder.isSmallScreen(context) ? 22
                   : 32,letterSpacing: 2),
           ),
         ),
@@ -62,8 +62,8 @@ class About extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(ResponsiveLayoutBuilder.isSmallScreen(context) ? 15: size.width*0.06 ),
             child: SelectableText(
-                "Since 1993 we have toamed a blog from the earliest years Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do evusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
-              style: textStyler(lineHeight: 1.8,fontSize: ResponsiveLayoutBuilder.isSmallScreen(context) ? 16:18,color: kFontColor),
+                "Since 1993 we have toamed a blog from the earliest years Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
+              style: textStyler(lineHeight: 1.8,fontSize: ResponsiveLayoutBuilder.isSmallScreen(context) ? 16:22,color: kFontColor),
               textAlign: ResponsiveLayoutBuilder.isSmallScreen(context) ? TextAlign.center: TextAlign.left,
             ),
           ),

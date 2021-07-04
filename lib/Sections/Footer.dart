@@ -18,6 +18,7 @@ class Footer extends StatelessWidget {
       child: MaxWidth(
         child: ResponsiveLayoutBuilder.isSmallScreen(context)
             ? Column(
+          mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,

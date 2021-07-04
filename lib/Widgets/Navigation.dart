@@ -6,8 +6,23 @@ import 'package:lowebsite/Widgets/NavItems.dart';
 import 'SmallWidgets.dart';
 import 'package:lowebsite/Widgets/ResponsiveBuilder.dart';
 
-class Navigation extends StatelessWidget {
-  const Navigation({Key? key}) : super(key: key);
+class Navigation extends StatefulWidget {
+  final VoidCallback fun;
+  const Navigation({Key? key,required this.fun}) : super(key: key);
+
+  @override
+  _NavigationState createState() => _NavigationState();
+}
+
+class _NavigationState extends State<Navigation> {
+  bool isMenu = false;
+
+  void toggleMenu(){
+    setState(() {
+      isMenu = !isMenu;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -32,7 +47,10 @@ class Navigation extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: IconButton(onPressed: (){}, icon: Icon(Icons.menu,color: kFontColor,size: 28,)),
+                child: IconButton(onPressed: (){
+                  toggleMenu();
+                  widget.fun();
+                }, icon: Icon( isMenu? Icons.close:  Icons.menu,color: kFontColor,size: 28,)),
               )
             ],
           ),

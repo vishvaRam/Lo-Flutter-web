@@ -7,7 +7,8 @@ import 'package:lowebsite/Widgets/Section.dart';
 import 'package:lowebsite/Widgets/SmallWidgets.dart';
 
 class Landing extends StatelessWidget {
-  const Landing({Key? key}) : super(key: key);
+  final VoidCallback fun ;
+  const Landing({Key? key,required this.fun}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class Landing extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              child: Navigation(),
+              child: Navigation(fun: fun,),
               top: 0,
               left: 0,
               right: 0,
